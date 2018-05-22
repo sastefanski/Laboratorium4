@@ -2,32 +2,34 @@ package com.example.seba.laboratorium4;
 
 import java.io.Serializable;
 
-public class Animal implements Serializable {
-    private int id;
-    private String gatunek, kolor, opis;
-    private float wielkość;
+public class Animal implements Serializable{
+    private int _id;
+    private String gatunek;
+    private String kolor;
+    private float wielkosc;
+    private String opis;
 
-    public Animal(int _id, String gatunek, String kolor, String opis, float wielkość) {
-        this.id = id;
+    public Animal(){}
+
+    public Animal(String gatunek, String kolor, float wielkosc, String opis){
+        super();
         this.gatunek = gatunek;
         this.kolor = kolor;
-        this.opis = opis;
-        this.wielkość = wielkość;
+        this.wielkosc=wielkosc;
+        this.opis=opis;
     }
-
-
-    public Animal(String string, String cursorString, float aFloat, String s) {
-    }
-
 
     @Override
-    public String toString() {
-        return "Zwierze: [id=" + id + ", gatunek=" + gatunek + ", kolor=" + kolor + ", wielkość=" +wielkość+" ]";
+    public String toString(){
+        return "Zwierze: [id="+_id+", gatunek="+gatunek+", kolor="+kolor+", wielkosc ="+wielkosc+" ]";
     }
 
-
     public int getId() {
-        return id;
+        return _id;
+    }
+
+    public void setId(int id) {
+        this._id = id;
     }
 
     public String getGatunek() {
@@ -38,17 +40,11 @@ public class Animal implements Serializable {
         return kolor;
     }
 
+    public float getWielkosc() {
+        return wielkosc;
+    }
+
     public String getOpis() {
         return opis;
     }
-
-    public float getWielkość() {
-        return wielkość;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }
-
-
